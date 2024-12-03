@@ -8972,7 +8972,7 @@
               "type": [
                 "bitflags",
                 {
-                  "type": "u8",
+                  "type": "i8",
                   "flags": [
                     "forward",
                     "backward",
