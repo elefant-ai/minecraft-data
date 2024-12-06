@@ -124,6 +124,7 @@
         }
       }
     ],
+    "ContainerID": "varint",
     "SoundEvent": [
       "container",
       [
@@ -4628,7 +4629,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             }
           ]
         ],
@@ -4637,7 +4638,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             },
             {
               "name": "stateId",
@@ -4664,7 +4665,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             },
             {
               "name": "property",
@@ -4681,7 +4682,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             },
             {
               "name": "stateId",
@@ -5061,7 +5062,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             },
             {
               "name": "nbSlots",
@@ -5569,7 +5570,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             },
             {
               "name": "trades",
@@ -5907,7 +5908,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             },
             {
               "name": "recipeDisplay",
@@ -8507,7 +8508,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             },
             {
               "name": "enchantment",
@@ -8520,7 +8521,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             },
             {
               "name": "stateId",
@@ -8571,7 +8572,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             }
           ]
         ],
@@ -8584,7 +8585,7 @@
             },
             {
               "name": "window_id",
-              "type": "varint"
+              "type": "ContainerID"
             },
             {
               "name": "state",
@@ -8905,7 +8906,7 @@
           [
             {
               "name": "windowId",
-              "type": "varint"
+              "type": "ContainerID"
             },
             {
               "name": "recipeId",
@@ -8972,7 +8973,7 @@
               "type": [
                 "bitflags",
                 {
-                  "type": "i8",
+                  "type": "u8",
                   "flags": [
                     "forward",
                     "backward",
