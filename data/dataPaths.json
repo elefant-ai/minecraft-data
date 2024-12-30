@@ -1475,7 +1475,7 @@
       "mapIcons": "pc/1.20.2",
       "commands": "pc/1.20.3",
       "sounds": "pc/1.21.1",
-      "proto": "pc/latest"
+      "proto": "pc/1.21.1"
     },
     "1.21.1": {
       "attributes": "pc/1.21.1",
@@ -1504,6 +1504,33 @@
       "sounds": "pc/1.21.1",
       "proto": "pc/1.21.1"
     },
+    "1.21.2": {
+      "attributes": "pc/1.21.2",
+      "blocks": "pc/1.21.2",
+      "blockCollisionShapes": "pc/1.21.2",
+      "biomes": "pc/1.21.2",
+      "effects": "pc/1.21.2",
+      "items": "pc/1.21.2",
+      "enchantments": "pc/1.21.2",
+      "recipes": "pc/1.21.2",
+      "instruments": "pc/1.21.2",
+      "materials": "pc/1.21.2",
+      "language": "pc/1.21.2",
+      "entities": "pc/1.21.2",
+      "protocol": "pc/1.21.3",
+      "windows": "pc/1.16.1",
+      "version": "pc/1.21.2",
+      "foods": "pc/1.21.2",
+      "particles": "pc/1.21.2",
+      "blockLoot": "pc/1.20",
+      "entityLoot": "pc/1.20",
+      "loginPacket": "pc/1.20.5",
+      "tints": "pc/1.21.2",
+      "mapIcons": "pc/1.20.2",
+      "commands": "pc/1.20.3",
+      "sounds": "pc/1.21.2",
+      "proto": "pc/1.21.3"
+    },
     "1.21.3": {
       "attributes": "pc/1.21.3",
       "blockCollisionShapes": "pc/1.21.3",
@@ -1529,7 +1556,7 @@
       "tints": "pc/1.21.3",
       "version": "pc/1.21.3",
       "windows": "pc/1.16.1",
-      "proto": "pc/latest"
+      "proto": "pc/1.21.3"
     }
   },
   "bedrock": {
