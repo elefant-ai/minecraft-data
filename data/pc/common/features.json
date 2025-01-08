@@ -847,6 +847,16 @@
     "versions": ["1.21", "latest"]
   },
   {
+    "name": "newPlayerInputPacket",
+    "description": "New player_input packet for movements, which replaces steer_vehicle",
+    "versions": ["1.21.2", "latest"]
+  },
+  {
+    "name": "noAckOnCreateSetSlotPacket",
+    "description": "Server does not send ack on creative_set_slot packets",
+    "versions": ["1.21.2", "latest"]
+  },
+  {
     "name": "movementPacketHasFlags",
     "description": "All serverbound movement packets require a new field from 1.21.2 onwards",
     "versions": ["1.21.2", "latest"]
