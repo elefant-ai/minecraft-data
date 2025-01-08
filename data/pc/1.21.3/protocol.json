@@ -2475,16 +2475,6 @@
         }
       ]
     ],
-    "MovementFlags": [
-      "bitflags",
-      {
-        "type": "restBuffer",
-        "flags": [
-          "onGround",
-          "hasHorizontalCollision"
-        ]
-      }
-    ],
     "entityMetadata": [
       "entityMetadataLoop",
       {
@@ -8735,6 +8725,16 @@
               "type": "bool"
             }
           ]
+        ],
+        "MovementFlags": [
+          "bitflags",
+          {
+            "type": "u8",
+            "flags": [
+              "onGround",
+              "hasHorizontalCollision"
+            ]
+          }
         ],
         "packet_position": [
           "container",

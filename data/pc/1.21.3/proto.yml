@@ -562,7 +562,7 @@
       _: itemCount ?
          if 0: void
          default:
-            item: varint
+            itemId: varint
 # https://wiki.vg/Slot_Data#Structured_components
             addedComponentCount: varint
             removedComponentCount: varint
@@ -934,10 +934,7 @@
       tameTexture: string
       angryTexture: string
       biome: IDSet
-   MovementFlags: [ "bitflags", {
-      "type": "restBuffer",
-      "flags": [ "onGround", "hasHorizontalCollision" ]
-   } ]
+
    entityMetadata: ["entityMetadataLoop", { "endVal": 255, "type": "entityMetadataEntry" }]
    tags: []varint
       tagName: string
@@ -2102,39 +2099,40 @@
       players: UUID[]varint
    # MC: ClientboundPlayerInfoUpdatePacket
    packet_player_info:
-      # action is a bitfield of the above
-      action: ["bitfield", [
-         { "name": "unused", "size": 1, "signed": false },
-         { "name": "update_priority", "size": 1, "signed": false },
-         { "name": "update_display_name", "size": 1, "signed": false },
-         { "name": "update_latency", "size": 1, "signed": false },
-         { "name": "update_listed", "size": 1, "signed": false },
-         { "name": "update_game_mode", "size": 1, "signed": false },
-         { "name": "initialize_chat", "size": 1, "signed": false },
-         { "name": "add_player", "size": 1, "signed": false }
-      ]]
+      action: ["bitflags", {
+         "type": "u8",
+         "flags": [
+            "add_player",
+            "initialize_chat",
+            "update_game_mode",
+            "update_listed",
+            "update_latency",
+            "update_display_name",
+            "update_priority"
+         ]
+      }]
       data: []varint
          uuid: UUID
          player: ../action/add_player ?
-            if 1: game_profile
+            if true: game_profile
             default: void
          chatSession: ../action/initialize_chat ?
-            if 1: chat_session
+            if true: chat_session
             default: void
          gamemode: ../action/update_game_mode ?
-            if 1: varint
+            if true: varint
             default: void
          listed: ../action/update_listed ?
-            if 1: varint
+            if true: varint
             default: void
          latency: ../action/update_latency ?
-            if 1: varint
+            if true: varint
             default: void
          displayName: ../action/update_display_name ?
-            if 1: ["option", "anonymousNbt"]
+            if true: anonOptionalNbt
             default: void
          listPriority: ../action/update_priority ?
-            if 1: varint
+            if true: varint
             default: void
 
    # MC: ClientboundPlayerLookAtPacket
@@ -3077,6 +3075,10 @@
    packet_lock_difficulty:
       locked: bool
 
+   MovementFlags: ["bitflags", {
+      "type": "u8",
+      "flags": ["onGround", "hasHorizontalCollision"]
+   }]
    # MC: ServerboundMovePlayerPacket.Pos
    packet_position:
       x: f64
