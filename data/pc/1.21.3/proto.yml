@@ -2389,7 +2389,7 @@
       passengers: varint[]varint
    # MC: ClientboundSetPlayerInventoryPacket
    packet_set_player_inventory:
-      slotId: optvarint
+      slotId: varint
       contents: Slot
    # MC: ClientboundSetPlayerTeamPacket
    packet_teams:
