@@ -4981,13 +4981,13 @@
           [
             {
               "name": "center",
-              "type": "vec3f"
+              "type": "vec3f64"
             },
             {
               "name": "playerKnockback",
               "type": [
                 "option",
-                "vec3f"
+                "vec3f64"
               ]
             },
             {
