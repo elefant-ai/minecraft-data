@@ -1838,8 +1838,8 @@
       onGround: bool
    # MC: ClientboundExplodePacket
    packet_explosion:
-      center: vec3f
-      playerKnockback?: vec3f
+      center: vec3f64
+      playerKnockback?: vec3f64
       explosionParticle: Particle
       soundId: varint
       _: soundId ?
